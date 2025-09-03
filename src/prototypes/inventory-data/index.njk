@@ -1,0 +1,18 @@
+---
+group: Examples
+title: Inventory prototype
+layout: inventory-data/views/_main
+---
+{% from "components/button/_macro.njk" import onsButton %}
+
+{% block main %}
+    <h1>Start inventory prototype</h1>
+    <p>This is the inventory prototype.</p>
+    {{
+        onsButton({
+            "text": "Start",
+            "classes": "ons-u-mt-l",
+            "url": pageInfo.rootPath + "/inventory.html"
+        })
+    }}
+{% endblock %}

@@ -1,0 +1,18 @@
+---
+group: Examples
+title: Inventory prototype v2
+layout: inventory-data-v2/views/_main
+---
+{% from "components/button/_macro.njk" import onsButton %}
+
+{% block main %}
+    <h1>Start inventory prototype</h1>
+    <p>This is the inventory prototype v2.</p>
+    {{
+        onsButton({
+            "text": "Start",
+            "classes": "ons-u-mt-l",
+            "url": pageInfo.rootPath + "/cloudera_workspaces.html"
+        })
+    }}
+{% endblock %}

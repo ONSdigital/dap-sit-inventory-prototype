@@ -1,0 +1,196 @@
+---
+group: Examples
+title: Inventory prototype
+layout: inventory-data/views/_main
+---
+{% from "components/button/_macro.njk" import onsButton %}
+{% from "components/document-list/_macro.njk" import onsDocumentList %}
+{% from "components/pagination/_macro.njk" import onsPagination %}
+
+{% block main %}
+    <h1>Project Workspaces</h1>
+    <p>This is the current project workspaces.</p>
+
+    {{
+        onsDocumentList({
+            "documents": [
+                {
+                    "title": {
+                        "text": 'Workspace 1',
+                        "url": '#0'
+                    },
+                    "metadata": {
+                        "object": {
+                            "text": 'Workspace'
+                        },
+                        "date": {
+                            "prefix": 'Created',
+                            "showPrefix": true,
+                            "iso": '2021-02-18',
+                            "short": '18 February 2021'
+                        }
+                    },
+                    "description": '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+                },
+                {
+                    "title": {
+                        "text": 'Workspace 2',
+                        "url": '#0'
+                    },
+                    "metadata": {
+                        "object": {
+                            "text": 'Workspace'
+                        },
+                        "date": {
+                            "prefix": 'Created',
+                            "showPrefix": true,
+                            "iso": '2021-02-18',
+                            "short": '18 February 2021'
+                        }
+                    },
+                    "description": '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+                },
+                {
+                    "title": {
+                        "text": 'Workspace 3',
+                        "url": '#0'
+                    },
+                    "metadata": {
+                        "object": {
+                            "text": 'Workspace'
+                        },
+                        "date": {
+                            "prefix": 'Created',
+                            "showPrefix": true,
+                            "iso": '2017-04-20',
+                            "short": '20 April 2017'
+                        }
+                    }
+                }
+            ]
+        })
+    }}
+
+    <br /><br />
+    
+    {{
+        onsPagination({
+            "currentPageNumber": 5,
+            "pages": [
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                },
+                {
+                    "url": "#0"
+                }
+            ]
+        })
+    }}
+
+    {{
+        onsButton({
+            "text": "Next",
+            "classes": "ons-u-mt-l",
+            "url": pageInfo.rootPath + "/workspace_details.html"
+        })
+    }}
+{% endblock %}

@@ -1,0 +1,91 @@
+---
+group: Examples
+title: Inventory prototype v2
+layout: inventory-data-v2/views/_main
+---
+{% from "components/button/_macro.njk" import onsButton %}
+
+{% block main %}
+    <h1>Project Workspace Details</h1>
+    
+    {% from "components/description-list/_macro.njk" import onsDescriptionList %}
+    {{
+        onsDescriptionList({
+            "classes": "ons-u-mb-no",
+            "descriptionListLabel": "Information about this business and its survey requirements",
+            "termCol": "2",
+            "descriptionCol": "10",
+            "itemsList": [
+                {
+                    "term": "Owners:",
+                    "descriptions": [
+                        {
+                            "description": "Maverick Pierce"
+                        },
+                        {
+                            "description": "Jamie Nichols"
+                        },
+                        {
+                            "description": "Annabella Hoffman"
+                        }
+                    ]
+                },
+                {
+                    "term": "Owners Directorate:",
+                    "descriptions": [
+                        {
+                            "description": "Digital Services"
+                        }
+                    ]
+                },
+                {
+                    "term": "Users:",
+                    "descriptions": [
+                        {
+                            "description": "Maverick Pierce (Workspace Owner)"
+                        },
+                        {
+                            "description": "Jamie Nichols (Deputy Workspace Owner)"
+                        },
+                        {
+                            "description": "Annabella Hoffman (Deputy Workspace Owner)"
+                        }
+                    ]
+                },
+                {
+                    "term": "Users Roles With Elavated Permissions:",
+                    "descriptions": [
+                        {
+                            "description": "Workspace Owner"
+                        }
+                    ]
+                },
+                {
+                    "term": "File location:",
+                    "descriptions": [
+                        {
+                            "description": "Temporary Data Storage Area"
+                        }
+                    ]
+                },
+                {
+                    "term": "Information Asset Register (IAR) Number:",
+                    "descriptions": [
+                        {
+                            "description": "REF-987654321"
+                        }
+                    ]
+                }
+            ]
+        })
+    }}
+
+
+    {{
+        onsButton({
+            "text": "Alternative",
+            "classes": "ons-u-mt-l",
+            "url": pageInfo.rootPath + "/project_workspaces_alternative_a.html"
+        })
+    }}
+{% endblock %}

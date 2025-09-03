@@ -1,0 +1,61 @@
+---
+group: Examples
+title: Inventory prototype
+layout: inventory-data/views/_main
+---
+{% from "components/button/_macro.njk" import onsButton %}
+
+{% block main %}
+    <h1>Project Workspace Details</h1>
+    <p>These are the project workspace details.</p>
+
+    <hr />
+
+    <br />
+    <h2>Project Workspace Owners</h2>
+    <ul>
+        <li>Maverick Pierce</li>
+        <li>Jamie Nichols</li>
+        <li>Annabella Hoffman</li>
+    </ul>
+
+    <br />
+    <h2>Project Workspace Owners Directorate</h2>
+    <ul>
+        <li>Digital Services</li>
+    </ul>
+
+    <br />
+    <h2>Project Workspace Users</h2>
+    <ul>
+        <li>Maverick Pierce (Workspace Owner)</li>
+        <li>Jamie Nichols (Deputy Workspace Owner)</li>
+        <li>Annabella Hoffman (Deputy Workspace Owner)</li>
+    </ul>
+
+    <br /> 
+    <h2>Project Workspace Users Roles With Elavated Permissions</h2>
+    <ul>
+        <li>Workspace Owner</li>
+    </ul>
+
+    <br /> 
+    <h2>File location</h2>
+    <ul>
+        <li>Temporary Data Storage Area</li>
+    </ul>
+
+    <br />
+    <h2>Information Asset Register (IAR) Number</h2>
+    <ul>
+        <li>REF-987654321</li>
+    </ul>
+
+    {{
+        onsButton({
+            "text": "Start Over",
+            "classes": "ons-u-mt-l",
+            "url": pageInfo.rootPath + "/index.html"
+        })
+    }}
+{% endblock %}

@@ -1,0 +1,141 @@
+---
+group: Examples
+title: Inventory prototype v2
+layout: inventory-data-v2/views/_main
+---
+{% from "components/button/_macro.njk" import onsButton %}
+
+{% block main %}
+
+
+    {% from "components/input/_macro.njk" import onsInput %}
+    {{
+        onsInput({
+            "id": 'search-field',
+            "label": {
+                'text': 'Search',
+                "classes": 'ons-u-pb-3xs ons-u-mb-no'
+            },
+            "searchButton": {
+                "visuallyHideButtonText": true,
+                "text": 'Search',
+                "iconType": 'search'
+            }
+        })
+    }}
+
+    <br />
+
+    {% from "components/hero/_macro.njk" import onsHero %}
+    {{
+        onsHero({
+            "title": 'Data Access Platform Inventory',
+            "text": 'This is the inventory of the Data Access Platform',
+            "variants": 'pale-blue'
+        })
+    }}
+
+
+    {% from "components/table-of-contents/_macro.njk" import onsTableOfContents %}
+
+    {{-
+        onsTableOfContents({
+            "title": 'Cloudera workspaces',
+            "ariaLabel": 'Links to page sections',
+            "skipLink": {
+                "url": '#0',
+                "text": 'Skip to guide content'
+            },
+            "lists": [
+                {
+                    "listHeading": 'Cloudera Workspace 1',
+                    "listHeadingHidden": 'help topics',
+                    "itemsList": [
+                        {
+                            "url": '#household1',
+                            "text": 'Project Workspace 1: Household and who lives here'
+                        },
+                        {
+                            "url": '#household2',
+                            "text": 'Project Workspace 2: Housing, sex and GI'
+                        }
+                    ]
+                },
+                {
+                    "listHeading": 'Cloudera Workspace 2',
+                    "listHeadingHidden": 'help topics',
+                    "itemsList": [
+                        {
+                            "url": '#individual1',
+                            "text": 'Project Workspace 1: Name, date of birth and marital status'
+                        },
+                        {
+                            "url": '#individual2',
+                            "text": 'Project Workspace 2: Language, religion and ethnicity'
+                        },
+                        {
+                            "url": '#individual3',
+                            "text": 'Project Workspace 3: Address, health and sexual orientation'
+                        },
+                        {
+                            "url": '#individual4',
+                            "text": 'Project Workspace 4: Education and employment'
+                        }
+                    ]
+                },
+                {
+                    "listHeading": 'Cloudera Workspace 3',
+                    "listHeadingHidden": 'help topics',
+                    "itemsList": [
+                        {
+                            "url": '#individual1',
+                            "text": 'Project Workspace 1: Name, date of birth and marital status'
+                        },
+                        {
+                            "url": '#individual2',
+                            "text": 'Project Workspace 2: Language, religion and ethnicity'
+                        },
+                        {
+                            "url": '#individual3',
+                            "text": 'Project Workspace 3: Address, health and sexual orientation'
+                        },
+                        {
+                            "url": '#individual4',
+                            "text": 'Project Workspace 4: Education and employment'
+                        }
+                    ]
+                },
+                {
+                    "listHeading": 'Cloudera Workspace 4',
+                    "listHeadingHidden": 'help topics',
+                    "itemsList": [
+                        {
+                            "url": '#individual1',
+                            "text": 'Project Workspace 1: Name, date of birth and marital status'
+                        },
+                        {
+                            "url": '#individual2',
+                            "text": 'Project Workspace 2: Language, religion and ethnicity'
+                        },
+                        {
+                            "url": '#individual3',
+                            "text": 'Project Workspace 3: Address, health and sexual orientation'
+                        },
+                        {
+                            "url": '#individual4',
+                            "text": 'Project Workspace 4: Education and employment'
+                        }
+                    ]
+                }
+            ]
+        })
+    -}}
+
+    {{
+        onsButton({
+            "text": "Next",
+            "classes": "ons-u-mt-l",
+            "url": pageInfo.rootPath + "/project_workspaces.html"
+        })
+    }}
+{% endblock %}

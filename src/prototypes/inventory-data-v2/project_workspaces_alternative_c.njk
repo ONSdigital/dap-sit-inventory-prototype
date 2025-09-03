@@ -1,0 +1,110 @@
+---
+group: Examples
+title: Inventory prototype v2
+layout: inventory-data-v2/views/_main
+---
+{% from "components/table-of-contents/_macro.njk" import onsTableOfContents %}
+{% extends "layout/_template.njk" %}
+{%
+    set pageConfig = {
+        "header": {
+            "title": "Project Workspace Details"
+        },
+        "breadcrumbs": {
+            "ariaLabel": 'Back',
+            "itemsList": [
+                {
+                    "url": '/',
+                    "id": "back-example-feedback-form-error",
+                    "text": 'Back',
+                    "attributes": {
+                        "data-attribute": "Example attribute"
+                    }
+                }
+            ]
+        },
+        "footer": {
+            "oglLink": {
+                "pre": 'All content is available under the',
+                "link": 'Open Government Licence v3.0',
+                "url": 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                "post": ', except where otherwise stated'
+            }
+        }
+    }
+%}
+
+{% block main %}
+    <div class="ons-page__container ons-container">
+        <div class="ons-grid ons-js-toc-container">
+            <div class="ons-grid__col ons-grid__col--sticky@m ons-col-4@m">
+                {{
+                    onsTableOfContents({
+                        "title": 'Contents',
+                        "ariaLabel": 'Sections in this page',
+                        "itemsList": [
+                            {
+                                "url": '#section1',
+                                "text": 'Owners'
+                            },
+                            {
+                                "url": '#section2',
+                                "text": 'Owners Directorate'
+                            },
+                            {
+                                "url": '#section3',
+                                "text": 'Users'
+                            },
+                            {
+                                "url": '#section4',
+                                "text": 'Users Roles With Elavated Permissions'
+                            },
+                            {
+                                "url": '#section5',
+                                "text": 'File Location'
+                            },
+                            {
+                                "url": '#section6',
+                                "text": 'Information Asset Register (IAR) Number'
+                            }
+                        ]
+                    })
+                }}
+            </div>
+            <div class="ons-grid__col ons-col-7@m ons-push-1@m">
+                <section id="section1">
+                    <h2>Owners</h2>
+                    <p>
+                        <ul><li>Maverick Pierce</li><li>Jamie Nichols</li><li>Annabella Hoffman</li></ul>
+                    </p>
+                </section>
+                <section id="section2">
+                    <h2>Owners Directorate</h2>
+                    <p><ul><li>Digital Services</li></ul></p>
+                </section>
+                <section id="section3">
+                    <h2>Users</h2>
+                    <p>
+                        <ul><li>Maverick Pierce (Workspace Owner)</li><li>Jamie Nichols (Deputy Workspace Owner)</li><li>Annabella Hoffman (Deputy Workspace Owner)</li></ul>
+                    </p>
+                </section>
+                <section id="section4">
+                    <h2>Users Roles With Elavated Permissions</h2>
+                    <p><ul><li>Workspace Owner</li></ul></p>
+                </section>
+                <section id="section5">
+                    <h2>File Location</h2>
+                    <p>
+                        <ul><li>Temporary Data Storage Area</li></ul>
+                    </p>
+                </section>
+                <section id="section6">
+                    <h2>Information Asset Register (IAR) Number</h2>
+                    <p>
+                        <ul><li>REF-987654321</li></ul>
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+{% endblock %}

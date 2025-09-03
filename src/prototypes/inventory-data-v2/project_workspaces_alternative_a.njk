@@ -1,0 +1,52 @@
+---
+group: Examples
+title: Inventory prototype v2
+layout: inventory-data-v2/views/_main
+---
+{% from "components/button/_macro.njk" import onsButton %}
+
+{% block main %}
+
+    {% from "components/details-panel/_macro.njk" import onsDetailsPanel %}
+
+    {{
+        onsDetailsPanel({
+            "open": true,
+            "title": "Project Workspace Details",
+            "detailsItems": [
+                {
+                    "text": 'Owners',
+                    "description": '<ul><li>Maverick Pierce</li><li>Jamie Nichols</li><li>Annabella Hoffman</li></ul>'
+                },
+                {
+                    "text": 'Owners Directorate',
+                    "description": '<ul><li>Digital Services</li></ul>'
+                },
+                {
+                    "text": 'Users',
+                    "description": '<ul><li>Maverick Pierce (Workspace Owner)</li><li>Jamie Nichols (Deputy Workspace Owner)</li><li>Annabella Hoffman (Deputy Workspace Owner)</li></ul>'
+                },
+                {
+                    "text": 'Users Roles With Elavated Permissions',
+                    "description": '<ul><li>Workspace Owner</li></ul>'
+                },
+                {
+                    "text": 'File Location',
+                    "description": '<ul><li>Temporary Data Storage Area</li></ul>'
+                },
+                {
+                    "text": 'Information Asset Register (IAR) Number',
+                    "description": '<ul><li>REF-987654321</li></ul>'
+                }
+            ]
+        })
+    }}
+
+    {{
+        onsButton({
+            "text": "Alternative",
+            "classes": "ons-u-mt-l",
+            "url": pageInfo.rootPath + "/project_workspaces_alternative_b.html"
+        })
+    }}
+{% endblock %}

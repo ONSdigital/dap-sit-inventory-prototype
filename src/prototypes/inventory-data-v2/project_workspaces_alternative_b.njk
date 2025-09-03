@@ -1,0 +1,70 @@
+---
+group: Examples
+title: Inventory prototype v2
+layout: inventory-data-v2/views/_main
+---
+{% from "components/button/_macro.njk" import onsButton %}
+
+{% block main %}
+
+    {% from "components/table/_macro.njk" import onsTable %}
+    {{
+        onsTable({
+            "variants": ['compact', 'row-hover'],
+            "caption": "Project Workspace Details",
+            "ths": [
+                {
+                    "value": "Owners"
+                },
+                {
+                    "value": "Owners Directorate"
+                },
+                {
+                    "value": "Users"
+                },
+                {
+                    "value": "Users Roles With Elavated Permissions"
+                },
+                {
+                    "value": "File location"
+                },
+                {
+                    "value": "Information Asset Register (IAR) Number"
+                }
+            ],
+            "trs": [
+                {
+                    "tds": [
+                        {
+                            "value": "<ul><li>Maverick Pierce</li><li>Jamie Nichols</li><li>Annabella Hoffman</li></ul>"
+                        },
+                        {
+                            "value": "<ul><li>Digital Services</li></ul>"
+                        },
+                        {
+                            "value": "<ul><li>Maverick Pierce (Workspace Owner)</li><li>Jamie Nichols (Deputy Workspace Owner)</li><li>Annabella Hoffman (Deputy Workspace Owner)</li></ul>"
+                        },
+                        {
+                            "value": "<ul><li>Workspace Owner</li></ul>"
+                        },
+                        {
+                            "value": "<ul><li>Temporary Data Storage Area</li></ul>"
+                        },
+                        {
+                            "value": "<ul><li>REF-987654321</li></ul>"
+                        }
+                    ]
+                }
+            ]
+        })
+    }}
+
+
+    {{
+        onsButton({
+            "text": "Alternative",
+            "classes": "ons-u-mt-l",
+            "url": pageInfo.rootPath + "/project_workspaces_alternative_c.html"
+        })
+    }}
+{% endblock %}
