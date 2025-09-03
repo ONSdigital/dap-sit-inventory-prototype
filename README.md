@@ -4,14 +4,15 @@
 
 This prototype provides an early proof of concept for the DAP Inventory, allowing us to explore design ideas, gather user feedback, and test potential user journeys before committing to full development. 
 
-## Installation instructions
+## Usage Guides
+
+### Installation instructions
 
 Install the dependencies:
 `yarn install`
 
 Preview the prototype by running `yarn start`.
 
-## Usage Guides
 ### How do the build commands work?
 
 This project uses [gulp](https://gulpjs.com/) to automate the above commands. The [prototype kit]({{PROTOTYPE_KIT_HOMEPAGE}}) provides default gulp tasks which are used by this repository which are inherited in the `./gulpfile.js` script.
