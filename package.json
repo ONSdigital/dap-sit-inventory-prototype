@@ -20,12 +20,14 @@
     "engine.io": "6.6.4",
     "engine.io-client": "6.6.3",
     "gulp": "^4.0.2",
+    "micromatch": "4.0.8",
     "socket.io-adapter": "2.5.5"
   },
   "resolutions": {
     "axios": "^1.11.0",
     "engine.io-client": "6.6.3",
     "engine.io": "6.6.4",
-    "socket.io-adapter": "2.5.5"
+    "socket.io-adapter": "2.5.5",
+    "micromatch": "4.0.8"
   }
 }
