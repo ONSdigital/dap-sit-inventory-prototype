@@ -18,6 +18,7 @@
     "@ons/prototype-kit": "git+https://github.com/ONSdigital/prototype-kit#v1.0.10",
     "axios": "^1.11.0",
     "chokidar": "4.0.3",
+    "css-select": "6.0.0",
     "engine.io": "6.6.4",
     "engine.io-client": "6.6.3",
     "gulp": "^4.0.2",
@@ -30,6 +31,7 @@
     "engine.io": "6.6.4",
     "socket.io-adapter": "2.5.5",
     "micromatch": "4.0.8",
-    "chokidar": "4.0.3"
+    "chokidar": "4.0.3",
+    "css-select": "6.0.0"
   }
 }
