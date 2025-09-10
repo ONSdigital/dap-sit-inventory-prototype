@@ -15,7 +15,7 @@
   },
   "__comments__":
   {
-    "resolutions": "Some packages have been pinned to avoid known compromised versions. See package-comments.md for more information."
+    "resolutions": "Some packages have been pinned to avoid known compromised versions. See PACKAGE-COMMENTS.md for more information."
   },
   "resolutions": {
     "axios": "^1.11.0",
